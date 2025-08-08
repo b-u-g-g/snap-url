@@ -1,4 +1,3 @@
-// can add sonner from shadcn ui after link created
 
 import {useEffect, useState} from "react";
 import {BarLoader} from "react-spinners";
@@ -33,12 +32,9 @@ const Dashboard = () => {
     fnUrls();
   }, []);
 
- /* const filteredUrls = urls?.filter((url) =>
-    url.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );*/
-const filteredUrls = urls?.filter((url) =>
-  (url?.title || "").toLowerCase().includes(searchQuery.toLowerCase())
-);
+  const filteredUrls = urls?.filter((url) =>
+    (url?.title || "").toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   useEffect(() => {
     if (urls?.length) fnClicks();
@@ -82,7 +78,9 @@ const filteredUrls = urls?.filter((url) =>
       </div>
       {error && <Error message={error?.message} />}
       {(filteredUrls || []).map((url, i) => (
-        <LinkCard key={i} url={url} fetchUrls={fnUrls} />
+        <div key={i} className="overflow-x-auto whitespace-normal break-words">
+          <LinkCard url={url} fetchUrls={fnUrls} />
+        </div>
       ))}
     </div>
   );
