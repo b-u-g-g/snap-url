@@ -24,9 +24,15 @@ const Header = () => {
   return (
     <>
       <nav className="py-4 flex justify-between items-center">
-        <Link to="/">
-          <img src="/logo.png" className="h-16" alt="Trimrr Logo" />
-        </Link>
+       <Link to="/" className="perspective-800">
+  <img
+    src="/logo.png"
+    className="h-16 rotate-y--6"
+    alt="Trimrr Logo"
+  />
+</Link>
+
+
         <div className="flex gap-4">
           {!user ? (
             <Button onClick={() => navigate("/auth")}>Login</Button>

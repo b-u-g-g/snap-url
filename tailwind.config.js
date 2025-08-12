@@ -17,6 +17,18 @@ module.exports = {
       },
     },
     extend: {
+       perspective: {
+    none: 'none',
+    400: '400px',
+    800: '800px',
+    1200: '1200px',
+  },
+  rotate: {
+    'y-6': 'rotateY(6deg)',
+    'y--6': 'rotateY(-6deg)',
+    'x-6': 'rotateX(6deg)',
+    'x--6': 'rotateX(-6deg)',
+  },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

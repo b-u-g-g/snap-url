@@ -93,7 +93,10 @@ export function CreateLink() {
       }}
     >
       <DialogTrigger asChild>
-        <Button variant="destructive">Create New Link</Button>
+   <Button className="bg-[#559393] hover:bg-[#4a8282] text-white">
+  Create New Link
+</Button>
+
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
